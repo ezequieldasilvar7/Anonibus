@@ -11,8 +11,7 @@ import axios from 'axios';
 import EmojiButton from '@joeattardi/emoji-button';
 import { enviarMensagem } from '../functions';
 
-const AudioRecorder = require('node-audiorecorder');
-const AudioRecorder = require('../library');
+
 
 export default function Chat() {
 
@@ -76,7 +75,9 @@ export default function Chat() {
         console.log(error);
       });
   }
-
+  const AudioRecorder = require('node-audiorecorder');
+  
+  
   const button = document.querySelector('#emoji-button');
   const picker = new EmojiButton(); 
   picker.on('emoji', emoji => {
